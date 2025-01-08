@@ -1,11 +1,11 @@
 {
   "rewrites": [
     {
-      "source": "/api/v1/(.*)",
-      "destination": "https://full-stack-socialmediaapp.onrender.com/$1"
+      "source": "/api/v1/:path*",
+      "destination": "https://full-stack-socialmediaapp.onrender.com/:path*"
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/"
     }
   ]
