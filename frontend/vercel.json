@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/api/v1/(.*)",
+      "source": "/api/(.*)",
       "destination": "https://full-stack-socialmediaapp.onrender.com/$1"
     },
     {
