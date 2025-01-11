@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getMessageSuccess, getMessageError } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
-
+import baseUrl from "../../../baseUrl.js";
 function Login() {
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -29,10 +29,7 @@ function Login() {
     }
     setLoading(true);
     axios
-      .post(
-        "/api/v1/users/login",
-        data
-      )
+      .post(`${baseUrl}/api/v1/users/login`, data)
       .then((res) => {
         setLoading(false);
         getMessageSuccess("user login successfully");

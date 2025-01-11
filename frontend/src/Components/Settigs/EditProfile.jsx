@@ -5,6 +5,7 @@ import { getMessageError, getMessageSuccess } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useEffect } from "react";
+import baseUrl from "../../../baseUrl.js";
 
 function EditProfile() {
   const [loading, setLoading] = useState(false);
@@ -23,7 +24,7 @@ function EditProfile() {
   });
   useEffect(() => {
     axios
-      .get("/api/v1/")
+      .get(`${baseUrl}/api/v1/`)
       .then((res) => {
         console.log("====================================");
         console.log("executed");
@@ -51,7 +52,7 @@ function EditProfile() {
 
     setLoading(true);
     axios
-      .post("/api/v1/users/editProfilePic", updateImage, {
+      .post(`${baseUrl}/api/v1/users/editProfilePic`, updateImage, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -75,7 +76,7 @@ function EditProfile() {
       return;
     }
     axios
-      .post("/api/v1/users/editUserName", userNameData)
+      .post(`${baseUrl}/api/v1/users/editUserName`, userNameData)
       .then((res) => {
         getMessageSuccess(res.data.message);
         return;
@@ -92,7 +93,7 @@ function EditProfile() {
       return;
     }
     axios
-      .post("/api/v1/users/editFullName", fullNameData)
+      .post(`${baseUrl}/api/v1/users/editFullName`, fullNameData)
       .then((res) => {
         getMessageSuccess(res.data.message);
         return;

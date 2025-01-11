@@ -4,12 +4,13 @@ import BackNavigation from "../BackNavigationBar/BackNavigation";
 import { MdModeEditOutline } from "react-icons/md";
 import { GrPowerShutdown } from "react-icons/gr";
 import axios from "axios";
+import baseUrl from "../../../baseUrl.js";
 
 function Settings() {
   const navigator = useNavigate();
   const loggoutHandler = () => {
     axios
-      .post("api/v1/users/logout")
+      .post(`${baseUrl}/api/v1/users/logout`)
       .then(() => {
         navigator("/login", { replace: true });
       })

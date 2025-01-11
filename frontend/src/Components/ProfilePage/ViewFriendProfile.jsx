@@ -12,6 +12,7 @@ import {
 
 import BackNavigation from "../BackNavigationBar/BackNavigation";
 import defaultAvatar from "../../../public/default-avatar.jpg";
+import baseUrl from "../../../baseUrl.js";
 
 function ViewFriendProfile() {
   const { id } = useParams();
@@ -21,7 +22,7 @@ function ViewFriendProfile() {
 
   useEffect(() => {
     axios
-      .get(`/api/v1/posts/getUserProfileFromPost/${id}`)
+      .get(`${baseUrl}/api/v1/posts/getUserProfileFromPost/${id}`)
       .then((res) => {
         if (res.data.message === "You are viewing your  Profile") {
           native("/");

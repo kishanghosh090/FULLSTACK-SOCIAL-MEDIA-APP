@@ -21,6 +21,7 @@ import Header from "../Header/Header";
 import BottomNav from "../BottomNav/BottomNav";
 import avatarDefault from "../../../public/default-avatar.jpg";
 import UserPost from "./UserPost";
+import baseUrl from "../../../baseUrl.js";
 
 export default function ProfilePage() {
   const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ export default function ProfilePage() {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("/api/v1/")
+      .get(`${baseUrl}/api/v1/`)
       .then((res) => {
         setIsOpen(true);
         setData(res.data.data);

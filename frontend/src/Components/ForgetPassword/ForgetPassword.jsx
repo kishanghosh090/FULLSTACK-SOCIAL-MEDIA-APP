@@ -4,6 +4,8 @@ import axios from "axios";
 import { getMessageSuccess, getMessageError } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import baseUrl from "../../../baseUrl.js";
+
 function ForgetPassword() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -29,7 +31,7 @@ function ForgetPassword() {
     }
     setLoading(true);
     axios
-      .post("/api/v1/users/forgetPasswordOTPSend", dataGetOTP)
+      .post(`${baseUrl}/api/v1/users/forgetPasswordOTPSend`, dataGetOTP)
       .then((res) => {
         console.log(res);
         getMessageSuccess("OTP sent successfully");
@@ -52,7 +54,7 @@ function ForgetPassword() {
       return;
     }
     axios
-      .post("/api/v1/users/forgetPasswordOTPVerify", dataForVerify)
+      .post(`${baseUrl}/api/v1/users/forgetPasswordOTPVerify`, dataForVerify)
       .then((res) => {
         console.log(res);
         getMessageSuccess("OTP verified successfully");

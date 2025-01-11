@@ -3,6 +3,7 @@ import axios from "axios";
 import { getMessageSuccess, getMessageError } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import baseUrl from "../../../baseUrl.js";
 function Register() {
   const navigate = useNavigate();
   const [data, setData] = useState({
@@ -34,7 +35,7 @@ function Register() {
     }
     setLoading(true);
     try {
-      const res = await axios.post("api/v1/users/register", data);
+      const res = await axios.post(`${baseUrl}/api/v1/users/register`, data);
       setLoading(false);
       getMessageSuccess("user register successfully");
       navigate("/login", { replace: true });
