@@ -21,7 +21,7 @@ import Header from "../Header/Header";
 import BottomNav from "../BottomNav/BottomNav";
 import avatarDefault from "../../../public/default-avatar.jpg";
 import UserPost from "./UserPost";
-import baseUrl from "../../../baseUrl.js";
+import { baseUrl } from "../../../baseUrl.js";
 
 export default function ProfilePage() {
   const [data, setData] = useState([]);
