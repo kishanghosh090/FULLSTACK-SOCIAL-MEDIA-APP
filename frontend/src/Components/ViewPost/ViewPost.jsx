@@ -4,7 +4,7 @@ import PostCard from "./PostCard";
 import axios from "axios";
 import { getMessageError, getMessageSuccess } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
-import baseUrl from "../../../baseUrl.js";
+import { baseUrl } from "../../../baseUrl.js";
 
 function ViewPost() {
   const [postData, setPostData] = useState([]);

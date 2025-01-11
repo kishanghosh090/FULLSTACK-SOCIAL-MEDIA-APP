@@ -4,7 +4,7 @@ import { getMessageError, getMessageSuccess } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import baseUrl from "../../../baseUrl.js";
+import {baseUrl} from "../../../baseUrl.js";
 
 function CreatePost() {
   const navigate = useNavigate();

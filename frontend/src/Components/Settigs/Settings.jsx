@@ -4,7 +4,7 @@ import BackNavigation from "../BackNavigationBar/BackNavigation";
 import { MdModeEditOutline } from "react-icons/md";
 import { GrPowerShutdown } from "react-icons/gr";
 import axios from "axios";
-import baseUrl from "../../../baseUrl.js";
+import {baseUrl} from "../../../baseUrl.js";
 
 function Settings() {
   const navigator = useNavigate();

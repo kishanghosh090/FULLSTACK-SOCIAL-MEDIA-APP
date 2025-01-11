@@ -15,6 +15,7 @@ import { IoSearch } from "react-icons/io5";
 import { CiCirclePlus } from "react-icons/ci";
 import axios from "axios";
 import avatarDefault from "../../../public/default-avatar.jpg";
+
 export default function Header(data) {
   const navigator = useNavigate();
   const handleLogout = () => {

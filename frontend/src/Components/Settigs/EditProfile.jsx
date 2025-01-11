@@ -5,7 +5,7 @@ import { getMessageError, getMessageSuccess } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useEffect } from "react";
-import baseUrl from "../../../baseUrl.js";
+import {baseUrl} from "../../../baseUrl.js";
 
 function EditProfile() {
   const [loading, setLoading] = useState(false);

@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import defaultAvatar from "../../../public/default-avatar.jpg";
 import { BiSolidLike } from "react-icons/bi";
 import axios from "axios";
-import baseUrl from "../../../baseUrl.js";
+import {baseUrl} from "../../../baseUrl.js";
 
 export default function PostCard(postData) {
   const likeHandle = (postCardId) => {

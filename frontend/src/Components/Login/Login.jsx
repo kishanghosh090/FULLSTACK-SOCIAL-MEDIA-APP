@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { getMessageSuccess, getMessageError } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
-import baseUrl from "../../../baseUrl.js";
+import {baseUrl} from "../../../baseUrl.js";
 function Login() {
   const navigate = useNavigate();
   const [data, setData] = useState({

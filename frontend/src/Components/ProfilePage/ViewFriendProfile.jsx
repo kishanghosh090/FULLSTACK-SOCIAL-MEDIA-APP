@@ -12,7 +12,7 @@ import {
 
 import BackNavigation from "../BackNavigationBar/BackNavigation";
 import defaultAvatar from "../../../public/default-avatar.jpg";
-import baseUrl from "../../../baseUrl.js";
+import {baseUrl} from "../../../baseUrl.js";
 
 function ViewFriendProfile() {
   const { id } = useParams();
