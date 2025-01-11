@@ -3,7 +3,7 @@ import axios from "axios";
 import { getMessageSuccess, getMessageError } from "../../Hooks/popUpMessage";
 import { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import {baseUrl} from "../../../baseUrl.js";
+import { baseUrl } from "../../../baseUrl.js";
 function Register() {
   const navigate = useNavigate();
   const [data, setData] = useState({
