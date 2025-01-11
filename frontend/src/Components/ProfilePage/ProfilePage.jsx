@@ -36,11 +36,15 @@ export default function ProfilePage() {
         setData(res.data.data);
         setPosts(res.data.data.posts);
         getMessageSuccess(res.data.message);
+        alert("hello");
         return;
       })
       .catch((err) => {
+        console.log(err);
+        alert(err?.response.data.message);
         window.location.href = "/Login";
         getMessageError(err?.response?.data.message);
+        
         return;
       });
   }, []);
