@@ -35,12 +35,13 @@ export default function ProfilePage() {
         setIsOpen(true);
         setData(res.data.data);
         setPosts(res.data.data.posts);
-
         getMessageSuccess(res.data.message);
+        return;
       })
       .catch((err) => {
         window.location.href = "/Login";
         getMessageError(err?.response?.data.message);
+        return;
       });
   }, []);
 
